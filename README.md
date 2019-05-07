@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## react 家族
 
-## Available Scripts
+### 从0开始创建裸项目react-families
+    
+    create-react-app react-families
+    
+### 1. 创建Count组件， 替代App.js
+    
+##### 为了便于演示， 这里创建一个最原始的count计时器，后面逐渐进行升级， 功能分成两个功能， 立即增加和延时增加
+    src/steps/1/Count.js
 
-In the project directory, you can run:
+### 2. 组件中间传递信息
+    组件之间传递信息， 一般分成 
+    （a） 父子组件传递信息 : 父--->子 一般通过属性传递变量  子--->父 一般是父组件通过属性传递给子组件一个回调函数， 子组件调传递参数调用回调函数
+    （b） 兄弟组件传递信息 : 兄弟组件传递信息一般是把数据放到父组件， 然后通过父组件传递的回调函数作用于父组件的数据， 从而影响兄弟组件的状态
+    
+    所以这个项目想实现子元素向父元素传递信息以及兄弟元素之间传递信息
 
-### `npm start`
+### 3. 使用全局变量统一管理数据， 方法放过统一的地方管理
+    这里使用redux重写count
+    action是对方法的描述
+    store用来存储数据
+    reducer用来描述不同的action作用下， 旧的状态迁移返回新的状态的过程
+    这里建议看一下redux源码中的createStore方法
+### 4. 第三种方法虽然实现了redux的常规用法， 但是写起来比较啰嗦， 而且不太方便管理， 尤其是把这种方法重写2项目， 就可以看到
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
