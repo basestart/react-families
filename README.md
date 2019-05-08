@@ -1,4 +1,5 @@
 ## react 家族
+    使用方法： 在index.js 中打开不同的App组件， 可以切换效果
 
 ### 从0开始创建裸项目react-families
     
