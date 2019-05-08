@@ -7,7 +7,8 @@ import './index.css';
 // import App from './steps/3/Count'; // 传递信息
 // import App from './steps/4/Parent'; // 传递信息
 // import App from './steps/5/index'; // 传递信息
-import App from './steps/6/index'; // 传递信息
+// import App from './steps/6/index'; // 传递信息
+import App from './steps/7/index'; // 传递信息
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
