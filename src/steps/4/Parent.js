@@ -56,9 +56,9 @@ export default class Count extends Component {
 
     render () {
         const props = {add1Action, add2Action, store}
-        let {count, child1, child2} = this.state;
+        
         return <div style={{textAlign: 'center'}}>
-            <h1>{count}</h1>
+            <h1>{store.getState().count}</h1>
             <Child1 {...props} updateState={this.updateState}/>
             <Child2 {...props} updateState = {this.updateState}/>
         </div>
