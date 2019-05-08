@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import Parent from './Parent'
 import Child1 from './Child1'
